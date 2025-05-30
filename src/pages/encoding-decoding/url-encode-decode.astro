@@ -1,21 +1,24 @@
 ---
-import "../styles/globals.css";
+import "../../styles/globals.css";
 import SidebarLayout from "@/layouts/sidebarLayout";
 
 const breadcrumbItems = [
-  { title: "Home" },
+    { title: "Home", href: "/" },
+    { title: "Encoding & Decoding", href: "/encoding-decoding" },
+    { title: "URL" },
 ];
 ---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tools</title>
+	<title>URL Encode/Decode</title>
 </head>
 <body>
 	<SidebarLayout client:load header={breadcrumbItems}>
-		<p>Home page</p>
+		<p>URL</p>
 	</SidebarLayout>
 </body>
 </html>
