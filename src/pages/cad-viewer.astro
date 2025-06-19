@@ -1,0 +1,23 @@
+---
+import "../styles/globals.css";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import ThreeView from "@/components/3d/three-view";
+
+const breadcrumbItems = [
+  { title: "Home", href: "/" },
+  { title: "CAD Viewer" },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAD Viewer</title>
+  </head>
+  <body>
+    <SidebarLayout client:load header={breadcrumbItems}>
+      <ThreeView client:load />
+    </SidebarLayout>
+  </body>
+</html>
