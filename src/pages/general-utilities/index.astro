@@ -1,0 +1,99 @@
+---
+import "../../styles/globals.css";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "General Utilities"},
+];
+
+const utilityItems = [
+    {
+        title: "Unix Time Converter",
+        description: "Convert between Unix timestamps and human-readable dates",
+        href: "/general-utilities/unix-time-converter"
+    },
+    {
+        title: "UUID Generate/Decode",
+        description: "Generate new UUIDs or decode existing ones",
+        href: "/general-utilities/uuid-generate-decode"
+    },
+    {
+        title: "Random String Generator",
+        description: "Generate random strings with customizable options",
+        href: "/general-utilities/random-string-generator"
+    },
+    {
+        title: "Lorem Ipsum Generator",
+        description: "Generate placeholder text for your projects",
+        href: "/general-utilities/lorem-ipsum-generator"
+    },
+    {
+        title: "String Inspector",
+        description: "Analyze and inspect string properties and encoding",
+        href: "/general-utilities/string-inspector"
+    },
+    {
+        title: "Line Sort/Dedupe",
+        description: "Sort lines of text and remove duplicates",
+        href: "/general-utilities/line-sort-dedupe"
+    },
+    {
+        title: "Color Converter",
+        description: "Convert between different color formats (HEX, RGB, HSL)",
+        href: "/general-utilities/color-converter"
+    },
+    {
+        title: "Cron Job Parser",
+        description: "Parse and validate cron expressions",
+        href: "/general-utilities/cron-job-parser"
+    },
+    {
+        title: "QR Code Generator",
+        description: "Generate QR codes for text, URLs, and more",
+        href: "/general-utilities/qr-code-generator"
+    },
+    {
+        title: "Password Generator",
+        description: "Generate secure passwords with customizable options",
+        href: "/general-utilities/password-generator"
+    }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>General Utilities</title>
+</head>
+<body>
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<div class="container mx-auto p-6">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">General Utilities</h1>
+				<p class="text-muted-foreground">A collection of useful tools for everyday development tasks</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{utilityItems.map((item) => (
+					<a href={item.href} class="block group">
+						<Card className="hover:shadow-md transition-shadow duration-200 h-full">
+							<CardHeader>
+								<CardTitle className="group-hover:text-primary transition-colors">
+									{item.title}
+								</CardTitle>
+								<CardDescription>
+									{item.description}
+								</CardDescription>
+							</CardHeader>
+						</Card>
+					</a>
+				))}
+			</div>
+		</div>
+	</SidebarLayout>
+</body>
+</html>

@@ -65,6 +65,10 @@ const data = {
         title: "QR Code Generator",
         url: "/general-utilities/qr-code-generator",
       },
+      {
+        title: "Password Generator",
+        url: "/general-utilities/password-generator",
+      },
     ],
   },
   {
