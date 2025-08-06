@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import UnixTimeConverter from "@/components/UnixTimeConverter";
+
+const breadcrumbItems = [
+  { title: "Home", href: "/" },
+  { title: "General Utilities", href: "/general-utilities" },
+  { title: "Unix Time Converter" },
+];
+---
+
+<BaseLayout title="Unix Time Converter">
+  <SidebarLayout client:only="react" header={breadcrumbItems}>
+    <div class="container mx-auto p-6">
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold mb-2">Unix Time Converter</h1>
+        <p class="text-muted-foreground">Convert between Unix timestamps and human-readable dates</p>
+      </div>
+      
+      <UnixTimeConverter client:only="react" />
+    </div>
+  </SidebarLayout>
+</BaseLayout>
