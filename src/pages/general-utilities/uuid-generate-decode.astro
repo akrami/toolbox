@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import UuidGenerateDecoder from "@/components/UuidGenerateDecoder";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "General Utilities", href: "/general-utilities" },
+    { title: "UUID Generate & Decode"},
+];
+---
+
+<BaseLayout title="UUID Generate & Decode">
+	<SidebarLayout client:only="react" header={breadcrumbItems}>
+		<div class="container mx-auto p-6 max-w-4xl">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">UUID Generate & Decode</h1>
+				<p class="text-muted-foreground">Generate v4 UUIDs and decode UUID properties</p>
+			</div>
+			
+			<UuidGenerateDecoder client:load />
+		</div>
+	</SidebarLayout>
+</BaseLayout>
