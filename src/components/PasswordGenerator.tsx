@@ -124,9 +124,45 @@ export default function PasswordGenerator() {
           <div className="space-y-4">
             {/* Length */}
             <div className="space-y-2">
-              <Label htmlFor="passwordLength">
-                Number of Characters: {options.length}
-              </Label>
+              <div className="flex items-center justify-between">
+                <Label htmlFor="passwordLength">
+                  Number of Characters: {options.length}
+                </Label>
+                <div className="flex gap-1">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => updateOptions('length', 32)}
+                    className="h-6 px-2 text-xs"
+                  >
+                    32
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => updateOptions('length', 64)}
+                    className="h-6 px-2 text-xs"
+                  >
+                    64
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => updateOptions('length', 128)}
+                    className="h-6 px-2 text-xs"
+                  >
+                    128
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    onClick={() => updateOptions('length', 256)}
+                    className="h-6 px-2 text-xs"
+                  >
+                    256
+                  </Button>
+                </div>
+              </div>
               <input 
                 id="passwordLength"
                 type="range" 
