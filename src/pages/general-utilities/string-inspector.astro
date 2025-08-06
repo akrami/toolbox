@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import StringInspector from "@/components/StringInspector";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "General Utilities", href: "/general-utilities" },
+    { title: "String Inspector"},
+];
+---
+
+<BaseLayout title="String Inspector">
+	<SidebarLayout client:only="react" header={breadcrumbItems}>
+		<div class="container mx-auto p-6 max-w-4xl">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">String Inspector</h1>
+				<p class="text-muted-foreground">Analyze strings and get detailed statistics including character count, word distribution, and more</p>
+			</div>
+			
+			<StringInspector client:load />
+		</div>
+	</SidebarLayout>
+</BaseLayout>
