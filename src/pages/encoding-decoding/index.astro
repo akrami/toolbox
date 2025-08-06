@@ -1,5 +1,5 @@
 ---
-import "../../styles/globals.css";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import SidebarLayout from "@/layouts/sidebarLayout";
 
 const breadcrumbItems = [
@@ -8,16 +8,8 @@ const breadcrumbItems = [
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Encoding & Decoding</title>
-</head>
-<body>
+<BaseLayout title="Encoding & Decoding">
 	<SidebarLayout client:load header={breadcrumbItems}>
 		<p>Encoding & Decoding</p>
 	</SidebarLayout>
-</body>
-</html>
+</BaseLayout>

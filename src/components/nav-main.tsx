@@ -44,7 +44,6 @@ export function NavMain({
   }, [])
 
   const isPathActive = (itemUrl: string): boolean => {
-    console.log({pathname, itemUrl, match: pathname === itemUrl || pathname.startsWith(itemUrl + "/")})
     return pathname === itemUrl || pathname.startsWith(itemUrl + "/")
   }
 

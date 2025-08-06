@@ -1,5 +1,5 @@
 ---
-import "../../styles/globals.css";
+import BaseLayout from "@/layouts/BaseLayout.astro";
 import SidebarLayout from "@/layouts/sidebarLayout";
 
 const breadcrumbItems = [
@@ -9,16 +9,8 @@ const breadcrumbItems = [
 ];
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HTML Entity Encode/Decode</title>
-</head>
-<body>
+<BaseLayout title="HTML Entity Encode/Decode">
 	<SidebarLayout client:load header={breadcrumbItems}>
 		<p>HTML Entity</p>
 	</SidebarLayout>
-</body>
-</html>
+</BaseLayout>
