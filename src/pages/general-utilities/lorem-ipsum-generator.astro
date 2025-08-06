@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import LoremIpsumGenerator from "@/components/LoremIpsumGenerator";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "General Utilities", href: "/general-utilities" },
+    { title: "Lorem Ipsum Generator"},
+];
+---
+
+<BaseLayout title="Lorem Ipsum Generator">
+	<SidebarLayout client:only="react" header={breadcrumbItems}>
+		<div class="container mx-auto p-6 max-w-2xl">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">Lorem Ipsum Generator</h1>
+				<p class="text-muted-foreground">Generate placeholder text in paragraphs, sentences, or words</p>
+			</div>
+			
+			<LoremIpsumGenerator client:load />
+		</div>
+	</SidebarLayout>
+</BaseLayout>
