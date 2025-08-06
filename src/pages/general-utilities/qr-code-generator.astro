@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import QRCodeGenerator from "@/components/QRCodeGenerator";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "General Utilities", href: "/general-utilities" },
+    { title: "QR Code Generator"},
+];
+---
+
+<BaseLayout title="QR Code Generator">
+	<SidebarLayout client:only="react" header={breadcrumbItems}>
+		<div class="container mx-auto p-6 max-w-4xl">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">QR Code Generator</h1>
+				<p class="text-muted-foreground">Generate QR codes for URLs, contacts, WiFi, and more</p>
+			</div>
+			
+			<QRCodeGenerator client:load />
+		</div>
+	</SidebarLayout>
+</BaseLayout>
