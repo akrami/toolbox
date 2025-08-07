@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SidebarLayout from "@/layouts/sidebarLayout";
+import Base64EncodeDecode from "@/components/Base64EncodeDecode";
 
 const breadcrumbItems = [
     { title: "Home", href: "/" },
@@ -11,6 +12,6 @@ const breadcrumbItems = [
 
 <BaseLayout title="Base64 Encode/Decode">
 	<SidebarLayout client:load header={breadcrumbItems}>
-		<p>Base64</p>
+		<Base64EncodeDecode client:load />
 	</SidebarLayout>
 </BaseLayout>

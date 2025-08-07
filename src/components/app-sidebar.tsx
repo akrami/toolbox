@@ -93,12 +93,8 @@ const data = {
         url: "/encoding-decoding/backslash-escape",
       },
       {
-        title: "Hex to ASCII",
+        title: "HEX/ASCII Converter",
         url: "/encoding-decoding/hex-to-ascii",
-      },
-      {
-        title: "ASCII to Hex",
-        url: "/encoding-decoding/ascii-to-hex",
       },
     ],
   },

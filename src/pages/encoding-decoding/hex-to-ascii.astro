@@ -1,17 +1,17 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SidebarLayout from "@/layouts/sidebarLayout";
-import HtmlEncodeDecode from "@/components/HtmlEncodeDecode";
+import HexToAscii from "@/components/HexToAscii";
 
 const breadcrumbItems = [
     { title: "Home", href: "/" },
     { title: "Encoding & Decoding", href: "/encoding-decoding" },
-    { title: "HTML Entity" },
+    { title: "HEX/ASCII Converter" },
 ];
 ---
 
-<BaseLayout title="HTML Entity Encode/Decode">
+<BaseLayout title="HEX/ASCII Converter">
 	<SidebarLayout client:load header={breadcrumbItems}>
-		<HtmlEncodeDecode client:load />
+		<HexToAscii client:load />
 	</SidebarLayout>
 </BaseLayout>

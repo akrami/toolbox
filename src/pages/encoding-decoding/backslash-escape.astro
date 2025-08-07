@@ -1,17 +1,17 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SidebarLayout from "@/layouts/sidebarLayout";
-import HtmlEncodeDecode from "@/components/HtmlEncodeDecode";
+import BackslashEscape from "@/components/BackslashEscape";
 
 const breadcrumbItems = [
     { title: "Home", href: "/" },
     { title: "Encoding & Decoding", href: "/encoding-decoding" },
-    { title: "HTML Entity" },
+    { title: "Backslash Escape" },
 ];
 ---
 
-<BaseLayout title="HTML Entity Encode/Decode">
+<BaseLayout title="Backslash Escape Encoder/Decoder">
 	<SidebarLayout client:load header={breadcrumbItems}>
-		<HtmlEncodeDecode client:load />
+		<BackslashEscape client:load />
 	</SidebarLayout>
 </BaseLayout>
