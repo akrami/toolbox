@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import JsonToCode from "@/components/JsonToCode";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "JSON to Code" },
+];
+---
+
+<BaseLayout title="JSON to Code">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<JsonToCode client:load />
+	</SidebarLayout>
+</BaseLayout>

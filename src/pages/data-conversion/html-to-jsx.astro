@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import HtmlToJsx from "@/components/HtmlToJsx";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "HTML to JSX" },
+];
+---
+
+<BaseLayout title="HTML to JSX">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<HtmlToJsx client:load />
+	</SidebarLayout>
+</BaseLayout>

@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import NumberBaseConverter from "@/components/NumberBaseConverter";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "Number Base Converter" },
+];
+---
+
+<BaseLayout title="Number Base Converter">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<NumberBaseConverter client:load />
+	</SidebarLayout>
+</BaseLayout>

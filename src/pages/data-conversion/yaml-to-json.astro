@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import YamlToJson from "@/components/YamlToJson";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "YAML to JSON" },
+];
+---
+
+<BaseLayout title="YAML to JSON">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<YamlToJson client:load />
+	</SidebarLayout>
+</BaseLayout>

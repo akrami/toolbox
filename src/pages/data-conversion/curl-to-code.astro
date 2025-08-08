@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import CurlToCode from "@/components/CurlToCode";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "cURL to Code" },
+];
+---
+
+<BaseLayout title="cURL to Code">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<CurlToCode client:load />
+	</SidebarLayout>
+</BaseLayout>

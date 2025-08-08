@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import PhpToJson from "@/components/PhpToJson";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "PHP to JSON" },
+];
+---
+
+<BaseLayout title="PHP to JSON">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<PhpToJson client:load />
+	</SidebarLayout>
+</BaseLayout>

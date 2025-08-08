@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import SvgToCss from "@/components/SvgToCss";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "SVG to CSS" },
+];
+---
+
+<BaseLayout title="SVG to CSS">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<SvgToCss client:load />
+	</SidebarLayout>
+</BaseLayout>

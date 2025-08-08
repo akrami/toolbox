@@ -1,0 +1,31 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "PHP Unserializer" },
+];
+---
+
+<BaseLayout title="PHP Unserializer">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<div class="container mx-auto p-6">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">PHP Unserializer</h1>
+				<p class="text-muted-foreground">Unserialize PHP data structures</p>
+			</div>
+			
+			<Card>
+				<CardHeader>
+					<CardTitle>PHP Unserializer Tool</CardTitle>
+				</CardHeader>
+				<CardContent>
+					<p class="text-muted-foreground">This tool is coming soon...</p>
+				</CardContent>
+			</Card>
+		</div>
+	</SidebarLayout>
+</BaseLayout>

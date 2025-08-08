@@ -1,0 +1,111 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion"},
+];
+
+const conversionItems = [
+    {
+        title: "JSON Format/Validate",
+        description: "Format and validate JSON data with syntax highlighting",
+        href: "/data-conversion/json-format-validate"
+    },
+    {
+        title: "YAML to JSON",
+        description: "Convert YAML format to JSON",
+        href: "/data-conversion/yaml-to-json"
+    },
+    {
+        title: "JSON to YAML",
+        description: "Convert JSON format to YAML",
+        href: "/data-conversion/json-to-yaml"
+    },
+    {
+        title: "JSON to CSV",
+        description: "Convert JSON data to CSV format",
+        href: "/data-conversion/json-to-csv"
+    },
+    {
+        title: "CSV to JSON",
+        description: "Convert CSV data to JSON format",
+        href: "/data-conversion/csv-to-json"
+    },
+    {
+        title: "PHP to JSON",
+        description: "Convert PHP arrays to JSON format",
+        href: "/data-conversion/php-to-json"
+    },
+    {
+        title: "JSON to PHP",
+        description: "Convert JSON to PHP array format",
+        href: "/data-conversion/json-to-php"
+    },
+    {
+        title: "PHP Serializer",
+        description: "Serialize PHP data structures",
+        href: "/data-conversion/php-serializer"
+    },
+    {
+        title: "PHP Unserializer",
+        description: "Unserialize PHP data structures",
+        href: "/data-conversion/php-unserializer"
+    },
+    {
+        title: "Number Base Converter",
+        description: "Convert numbers between different bases (binary, octal, decimal, hex)",
+        href: "/data-conversion/number-base-converter"
+    },
+    {
+        title: "HTML to JSX",
+        description: "Convert HTML to JSX format for React",
+        href: "/data-conversion/html-to-jsx"
+    },
+    {
+        title: "SVG to CSS",
+        description: "Convert SVG icons to CSS background images",
+        href: "/data-conversion/svg-to-css"
+    },
+    {
+        title: "JSON to Code",
+        description: "Generate code models from JSON data",
+        href: "/data-conversion/json-to-code"
+    },
+    {
+        title: "cURL to Code",
+        description: "Convert cURL commands to code in various languages",
+        href: "/data-conversion/curl-to-code"
+    }
+];
+---
+
+<BaseLayout title="Data Conversion">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<div class="container mx-auto p-6">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">Data Conversion</h1>
+				<p class="text-muted-foreground">Tools for converting between different data formats and structures</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{conversionItems.map((item) => (
+					<a href={item.href} class="block group">
+						<Card className="hover:shadow-md transition-shadow duration-200 h-full">
+							<CardHeader>
+								<CardTitle className="group-hover:text-primary transition-colors">
+									{item.title}
+								</CardTitle>
+								<CardDescription>
+									{item.description}
+								</CardDescription>
+							</CardHeader>
+						</Card>
+					</a>
+				))}
+			</div>
+		</div>
+	</SidebarLayout>
+</BaseLayout>

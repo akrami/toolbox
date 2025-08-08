@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import CsvToJson from "@/components/CsvToJson";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "CSV to JSON" },
+];
+---
+
+<BaseLayout title="CSV to JSON">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<CsvToJson client:load />
+	</SidebarLayout>
+</BaseLayout>

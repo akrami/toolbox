@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import PhpSerializer from "@/components/PhpSerializer";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "PHP Serializer" },
+];
+---
+
+<BaseLayout title="PHP Serializer">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<PhpSerializer client:load />
+	</SidebarLayout>
+</BaseLayout>

@@ -105,59 +105,59 @@ const data = {
     items: [
       {
         title: "JSON Format/Validate",
-        url: "/date-conversion/json-format-validate",
+        url: "/data-conversion/json-format-validate",
       },
       {
         title: "YAML to JSON",
-        url: "/date-conversion/yaml-to-json",
+        url: "/data-conversion/yaml-to-json",
       },
       {
         title: "JSON to YAML",
-        url: "/date-conversion/json-to-yaml",
+        url: "/data-conversion/json-to-yaml",
       },
       {
         title: "JSON to CSV",
-        url: "/date-conversion/json-to-csv",
+        url: "/data-conversion/json-to-csv",
       },
       {
         title: "CSV to JSON",
-        url: "/date-conversion/csv-to-json",
+        url: "/data-conversion/csv-to-json",
       },
       {
         title: "PHP to JSON",
-        url: "/date-conversion/php-to-json",
+        url: "/data-conversion/php-to-json",
       },
       {
         title: "JSON to PHP",
-        url: "/date-conversion/json-to-php",
+        url: "/data-conversion/json-to-php",
       },
       {
         title: "PHP Serializer",
-        url: "/date-conversion/php-serializer",
+        url: "/data-conversion/php-serializer",
       },
       {
         title: "PHP Unserializer",
-        url: "/date-conversion/php-unserializer",
+        url: "/data-conversion/php-unserializer",
       },
       {
         title: "Number Base Converter",
-        url: "/date-conversion/number-base-converter",
+        url: "/data-conversion/number-base-converter",
       },
       {
         title: "HTML to JSX",
-        url: "/date-conversion/html-to-jsx",
+        url: "/data-conversion/html-to-jsx",
       },
       {
         title: "SVG to CSS",
-        url: "/date-conversion/svg-to-css",
+        url: "/data-conversion/svg-to-css",
       },
       {
         title: "JSON to Code",
-        url: "/date-conversion/json-to-code",
+        url: "/data-conversion/json-to-code",
       },
       {
         title: "cURL to Code",
-        url: "/date-conversion/curl-to-code",
+        url: "/data-conversion/curl-to-code",
       },
     ],
   },

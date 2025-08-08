@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import JsonFormatValidate from "@/components/JsonFormatValidate";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Data Conversion", href: "/data-conversion" },
+    { title: "JSON Format/Validate" },
+];
+---
+
+<BaseLayout title="JSON Format/Validate">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<JsonFormatValidate client:load />
+	</SidebarLayout>
+</BaseLayout>
