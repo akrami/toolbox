@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import RegExpTester from "@/components/RegExpTester";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Analysis & Debugging", href: "/analysis-debugging" },
+    { title: "RegExp Tester" },
+];
+---
+
+<BaseLayout title="RegExp Tester">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<RegExpTester client:load />
+	</SidebarLayout>
+</BaseLayout>

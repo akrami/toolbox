@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import StringCaseConverter from "@/components/StringCaseConverter";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Analysis & Debugging", href: "/analysis-debugging" },
+    { title: "String Case Converter" },
+];
+---
+
+<BaseLayout title="String Case Converter">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<StringCaseConverter client:load />
+	</SidebarLayout>
+</BaseLayout>

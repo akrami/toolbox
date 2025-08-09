@@ -229,10 +229,6 @@ const data = {
         title: "String Case Converter",
         url: "/analysis-debugging/string-case-converter",
       },
-      {
-        title: "Certificate Decoder (X.509)",
-        url: "/analysis-debugging/certificate-decoder-x509",
-      },
     ],
   }
 ]

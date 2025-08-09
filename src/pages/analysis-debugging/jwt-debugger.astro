@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import JwtDebugger from "@/components/JwtDebugger";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Analysis & Debugging", href: "/analysis-debugging" },
+    { title: "JWT Debugger" },
+];
+---
+
+<BaseLayout title="JWT Debugger">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<JwtDebugger client:load />
+	</SidebarLayout>
+</BaseLayout>

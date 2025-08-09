@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import TextDiffChecker from "@/components/TextDiffChecker";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Analysis & Debugging", href: "/analysis-debugging" },
+    { title: "Text Diff Checker" },
+];
+---
+
+<BaseLayout title="Text Diff Checker">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<TextDiffChecker client:load />
+	</SidebarLayout>
+</BaseLayout>

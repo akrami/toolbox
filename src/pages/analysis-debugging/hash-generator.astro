@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import HashGenerator from "@/components/HashGenerator";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Analysis & Debugging", href: "/analysis-debugging" },
+    { title: "Hash Generator" },
+];
+---
+
+<BaseLayout title="Hash Generator">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<HashGenerator client:load />
+	</SidebarLayout>
+</BaseLayout>

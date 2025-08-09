@@ -1,0 +1,71 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Analysis & Debugging"},
+];
+
+const analysisItems = [
+    {
+        title: "JWT Debugger",
+        description: "Debug, validate, and decode JSON Web Tokens",
+        href: "/analysis-debugging/jwt-debugger"
+    },
+    {
+        title: "RegExp Tester",
+        description: "Test and validate regular expressions with real-time matching",
+        href: "/analysis-debugging/regexp-tester"
+    },
+    {
+        title: "URL Parser",
+        description: "Parse and analyze URL components and parameters",
+        href: "/analysis-debugging/url-parser"
+    },
+    {
+        title: "Text Diff Checker",
+        description: "Compare text files and highlight differences",
+        href: "/analysis-debugging/text-diff-checker"
+    },
+    {
+        title: "Hash Generator",
+        description: "Generate various hash types (MD5, SHA1, SHA256, etc.)",
+        href: "/analysis-debugging/hash-generator"
+    },
+    {
+        title: "String Case Converter",
+        description: "Convert text between different case formats",
+        href: "/analysis-debugging/string-case-converter"
+    },
+];
+---
+
+<BaseLayout title="Analysis & Debugging">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<div class="container mx-auto p-6">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">Analysis & Debugging</h1>
+				<p class="text-muted-foreground">Tools for analyzing and debugging your code and data</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{analysisItems.map((item) => (
+					<a href={item.href} class="block group">
+						<Card className="hover:shadow-md transition-shadow duration-200 h-full">
+							<CardHeader>
+								<CardTitle className="group-hover:text-primary transition-colors">
+									{item.title}
+								</CardTitle>
+								<CardDescription>
+									{item.description}
+								</CardDescription>
+							</CardHeader>
+						</Card>
+					</a>
+				))}
+			</div>
+		</div>
+	</SidebarLayout>
+</BaseLayout>
