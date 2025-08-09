@@ -1,0 +1,81 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Code Formatting"},
+];
+
+const formattingItems = [
+    {
+        title: "HTML Beautify/Minify",
+        description: "Format and minify HTML code with proper indentation",
+        href: "/code-formatting/html-beautify-minify"
+    },
+    {
+        title: "CSS Beautify/Minify",
+        description: "Format and minify CSS code for better readability",
+        href: "/code-formatting/css-beautify-minify"
+    },
+    {
+        title: "JS Beautify/Minify",
+        description: "Format and minify JavaScript code with proper structure",
+        href: "/code-formatting/js-beautify-minify"
+    },
+    {
+        title: "LESS Beautify/Minify",
+        description: "Format and minify LESS stylesheets",
+        href: "/code-formatting/less-beautify-minify"
+    },
+    {
+        title: "SCSS Beautify/Minify",
+        description: "Format and minify SCSS stylesheets",
+        href: "/code-formatting/scss-beautify-minify"
+    },
+    {
+        title: "XML Beautify/Minify",
+        description: "Format and minify XML documents with proper structure",
+        href: "/code-formatting/xml-beautify-minify"
+    },
+    {
+        title: "SQL Formatter",
+        description: "Format SQL queries for better readability",
+        href: "/code-formatting/sql-formatter"
+    },
+    {
+        title: "Markdown Preview",
+        description: "Preview and format Markdown content",
+        href: "/code-formatting/markdown-preview"
+    }
+];
+---
+
+<BaseLayout title="Code Formatting">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<div class="container mx-auto p-6">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">Code Formatting</h1>
+				<p class="text-muted-foreground">Tools for beautifying and minifying your code across different languages</p>
+			</div>
+			
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+				{formattingItems.map((item) => (
+					<a href={item.href} class="block group">
+						<Card className="hover:shadow-md transition-shadow duration-200 h-full">
+							<CardHeader>
+								<CardTitle className="group-hover:text-primary transition-colors">
+									{item.title}
+								</CardTitle>
+								<CardDescription>
+									{item.description}
+								</CardDescription>
+							</CardHeader>
+						</Card>
+					</a>
+				))}
+			</div>
+		</div>
+	</SidebarLayout>
+</BaseLayout>

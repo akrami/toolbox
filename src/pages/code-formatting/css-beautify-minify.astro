@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import CssBeautifyMinify from "@/components/CssBeautifyMinify";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Code Formatting", href: "/code-formatting" },
+    { title: "CSS Beautify/Minify" },
+];
+---
+
+<BaseLayout title="CSS Beautify/Minify">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<CssBeautifyMinify client:load />
+	</SidebarLayout>
+</BaseLayout>

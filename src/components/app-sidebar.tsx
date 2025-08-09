@@ -179,10 +179,6 @@ const data = {
         url: "/code-formatting/js-beautify-minify",
       },
       {
-        title: "ERB Beautify/Minify",
-        url: "/code-formatting/erb-beautify-minify",
-      },
-      {
         title: "LESS Beautify/Minify",
         url: "/code-formatting/less-beautify-minify",
       },

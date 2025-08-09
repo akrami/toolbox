@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import SqlFormatter from "@/components/SqlFormatter";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Code Formatting", href: "/code-formatting" },
+    { title: "SQL Formatter" },
+];
+---
+
+<BaseLayout title="SQL Formatter">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<SqlFormatter client:load />
+	</SidebarLayout>
+</BaseLayout>

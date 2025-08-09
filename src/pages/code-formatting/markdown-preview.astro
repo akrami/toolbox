@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SidebarLayout from "@/layouts/sidebarLayout";
+import MarkdownPreview from "@/components/MarkdownPreview";
+
+const breadcrumbItems = [
+    { title: "Home", href: "/" },
+    { title: "Code Formatting", href: "/code-formatting" },
+    { title: "Markdown Preview" },
+];
+---
+
+<BaseLayout title="Markdown Preview">
+	<SidebarLayout client:load header={breadcrumbItems}>
+		<MarkdownPreview client:load />
+	</SidebarLayout>
+</BaseLayout>
