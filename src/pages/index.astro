@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import SidebarLayout from "@/layouts/sidebarLayout";
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
 const breadcrumbItems = [
   { title: "Home" },
@@ -42,19 +43,25 @@ const categories = [
 
 <BaseLayout title="Tools">
 	<SidebarLayout client:load header={breadcrumbItems}>
-		<div class="p-6">
-			<h1 class="text-3xl font-bold mb-2">Developer Toolbox</h1>
-			<p class="text-muted-foreground mb-8">A comprehensive collection of development tools to boost your productivity</p>
+		<div class="container mx-auto p-6">
+			<div class="mb-8">
+				<h1 class="text-3xl font-bold mb-2">Developer Toolbox</h1>
+				<p class="text-muted-foreground">A comprehensive collection of development tools to boost your productivity</p>
+			</div>
 			
-			<div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 				{categories.map((category) => (
-					<a href={category.url} class="block group hover:no-underline">
-						<div class="rounded-xl border bg-card text-card-foreground shadow hover:shadow-lg transition-shadow group-hover:border-primary/20">
-							<div class="flex flex-col space-y-1.5 p-6">
-								<h3 class="font-semibold leading-none tracking-tight group-hover:text-primary transition-colors">{category.title}</h3>
-								<p class="text-sm text-muted-foreground">{category.description}</p>
-							</div>
-						</div>
+					<a href={category.url} class="block group">
+						<Card className="hover:shadow-md transition-shadow duration-200 h-full">
+							<CardHeader>
+								<CardTitle className="group-hover:text-primary transition-colors">
+									{category.title}
+								</CardTitle>
+								<CardDescription>
+									{category.description}
+								</CardDescription>
+							</CardHeader>
+						</Card>
 					</a>
 				))}
 			</div>
